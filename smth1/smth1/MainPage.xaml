@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:smth1.CustomControls; assembly:smth1"
+             mc:Ignorable="d"
+             Title="bucket"
+             x:Class="smth1.MainPage">
+
+        <StackLayout Padding="10">
+        <local:GradientColorStack StartColor="#1cac78" EndColor="#ff7e93">
+
+            <StackLayout
+                x:Name = "products" IsEnabled="True" >
+                <Label TextColor="#934293" Text="vodichka" FontSize="40">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android">CabinSketch-Reg.ttf#Cabin Sketch</On>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+        </local:GradientColorStack>
+
+        <Grid VerticalOptions="EndAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Text="Order"
+                       TextColor="WhiteSmoke"
+                       WidthRequest="100"
+                       HeightRequest="40"
+                       FontSize="Small"
+                       BackgroundColor="DeepPink"
+                       VerticalOptions="End"
+                       Grid.Column="1"
+                       Clicked="order"
+                       HorizontalOptions="Center"/>
+
+            <Button Text="+"
+                       TextColor="WhiteSmoke"
+                       WidthRequest="60"
+                       HeightRequest="60"
+                       FontSize="Small"
+                       BackgroundColor="DeepPink"
+                       VerticalOptions="End"
+                       CornerRadius="100"
+                       Grid.Column="2"
+                       Clicked="Add_"
+                       HorizontalOptions="End"/>
+        </Grid>
+    </StackLayout>
+    
+
+
+</ContentPage>
+   

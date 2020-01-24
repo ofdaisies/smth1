@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="smth1.Bucket">
+    <ContentPage.Content>
+        <Grid Padding="40">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Picker x:Name ="p" Title="choose"
+                            SelectedIndexChanged="name_img">
+                    </Picker>
+                </StackLayout>
+                <StackLayout
+                     x:Name = "img"
+                    Grid.Row="1">
+                    <Image x:Name="product"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Orientation="Vertical">
+                    <Stepper x:Name="_stepper"
+                 Maximum="100"
+                 Increment="1"
+                 HorizontalOptions="Center"
+                ValueChanged="val_change"/>
+                <Label x:Name ="count" Text="0" HorizontalOptions="Center" FontSize="Large" TextColor="Black"/>
+                </StackLayout>
+                
+            </Grid>
+            <Button Text="Confirm"
+                   TextColor="WhiteSmoke"
+                   WidthRequest="100"
+                   HeightRequest="40"
+                   FontSize="Small"
+                   BackgroundColor="DeepPink"
+                   VerticalOptions="End"
+                   Clicked="confirm"
+                   HorizontalOptions="Center"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
